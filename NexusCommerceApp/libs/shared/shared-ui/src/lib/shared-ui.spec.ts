@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SharedShell } from './shared-shell';
 
-describe('SharedShell', () => {
-  let component: SharedShell;
-  let fixture: ComponentFixture<SharedShell>;
+import { SharedUi } from './shared-ui';
+
+describe('SharedUi', () => {
+  let component: SharedUi;
+  let fixture: ComponentFixture<SharedUi>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SharedShell],
-    }).compileComponents();
+      imports: [SharedUi]
+    })
+    .compileComponents();
 
-    fixture = TestBed.createComponent(SharedShell);
+    fixture = TestBed.createComponent(SharedUi);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@frontend/shared-shell": ["shared/src/index.ts"]
+      "@NexusCommerceApp/auth": ["libs/auth/src/index.ts"],
+      "@NexusCommerceApp/shared-ui": ["libs/shared/shared-ui/src/index.ts"],
+      "@NexusCommerceApp/shared-util": ["libs/shared/shared-util/src/index.ts"],
+      "@NexusCommerceApp/shared-data-access": ["libs/shared/data-access/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

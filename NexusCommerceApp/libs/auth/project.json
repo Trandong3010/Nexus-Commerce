@@ -1,0 +1,41 @@
+{
+  "name": "auth",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "auth/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular/build:ng-packagr",
+      "configurations": {
+        "production": {
+          "tsConfig": "auth/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "auth/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular/build:karma",
+      "options": {
+        "tsConfig": "auth/tsconfig.spec.json",
+        "polyfills": [
+          "zone.js",
+          "zone.js/testing"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@angular-eslint/builder:lint",
+      "options": {
+        "lintFilePatterns": [
+          "auth/**/*.ts",
+          "auth/**/*.html"
+        ],
+        "eslintConfig": "auth/eslint.config.mjs"
+      }
+    }
+  }
+}
